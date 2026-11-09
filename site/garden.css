@@ -1,4 +1,9 @@
 :root { --garden-ink:#3e4536; --garden-sage:#6c8965; --garden-cream:#fffaf1; }
+.app-header .brand-mark {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
 .garden-mode { padding-bottom:22px; }
 .garden-wrap { max-width:1080px; margin:0 auto 24px; color:var(--garden-ink); }
 .garden-intro { text-align:center; padding:16px 16px 22px; }
