@@ -1,0 +1,77 @@
+/* 마음온도 v8: illustrated weather choices; let-go activity alongside other choices. */
+.student-paths button[data-garden="release"] {
+  background:#edf6e8;
+  border-color:#a4c9a2;
+  box-shadow:0 4px 0 #d2e5cc;
+}
+.student-paths button[data-garden="release"] .student-path-art {
+  background:#d4e9d0;
+}
+.student-paths button[data-garden="release"] strong { color:#315c48; }
+.student-paths button[data-garden="release"]:hover,
+.student-paths button[data-garden="release"]:focus-visible {
+  background:#e0f0db;
+  border-color:#6f9c79;
+}
+
+.student-weather-grid { align-items:stretch; }
+.student-weather-grid button {
+  min-height:160px;
+  gap:7px;
+  padding:12px 6px 10px;
+}
+.student-weather-grid .student-weather-art,
+.student-weather-grid button:nth-child(n) .student-weather-art {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:105px;
+  height:105px;
+  max-width:100%;
+  border-radius:0;
+  padding:0;
+  background:transparent;
+}
+.student-weather-grid .student-weather-art img,
+.weather-sky-art img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.student-weather-grid .student-weather-name {
+  font-size:14px;
+  color:#4e594b;
+  word-break:keep-all;
+}
+.student-weather-grid button.chosen {
+  background:#edf7e9;
+  border-color:#79ab80;
+  box-shadow:inset 0 0 0 1px #79ab80;
+}
+.weather-sky-art {
+  background:transparent !important;
+  border:0;
+  border-radius:0;
+  padding:0;
+  box-shadow:none;
+}
+
+@media(max-width:700px) {
+  .student-paths button:last-child { grid-column:auto; justify-content:flex-start; }
+  .student-weather-grid button { min-height:142px; flex-direction:column; gap:3px; padding:8px 4px 10px; }
+  .student-weather-grid .student-weather-art,
+  .student-weather-grid button:nth-child(n) .student-weather-art {
+    width:91px;
+    height:91px;
+    padding:0;
+  }
+  .student-weather-grid button:last-child { grid-column:1/-1; flex-direction:row; min-height:100px; gap:13px; }
+  .student-weather-grid button:last-child .student-weather-art { width:90px; height:90px; }
+  .student-weather-grid .student-weather-name { font-size:13px; }
+}
+@media(max-width:390px) {
+  .student-weather-grid .student-weather-art,
+  .student-weather-grid button:nth-child(n) .student-weather-art { width:80px; height:80px; }
+  .student-weather-grid button { min-height:131px; }
+}

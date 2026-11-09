@@ -1,0 +1,13 @@
+{
+  "name": "mind-1do",
+  "version": "1.0.0",
+  "private": true,
+  "description": "오늘도 1도 마음온도 — GPT Sites 14번째 버전의 독립 정적 배포본",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

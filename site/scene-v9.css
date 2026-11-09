@@ -1,0 +1,55 @@
+/* 마음온도 v9 — scenic weather pictures, a growing kind-word tree, and unobstructed reading. */
+
+/* The help destination remains available in top navigation and the mobile tab bar. */
+.crisis-float { display:none !important; }
+
+/* These are little landscapes, not cartoon-weather icons. */
+.student-weather-grid button { min-height:170px; padding:8px 6px 12px; }
+.student-weather-grid .student-weather-art,
+.student-weather-grid button:nth-child(n) .student-weather-art {
+  width:100%;
+  max-width:180px;
+  height:120px;
+  padding:0;
+}
+.student-weather-grid .student-weather-art img { object-fit:contain; }
+.weather-sky-art {
+  width:182px;
+  height:122px;
+  top:19px;
+  right:4%;
+}
+.weather-detail-art { width:min(95%,345px); height:100%; margin:auto; display:grid; place-items:center; }
+.weather-detail-art img { display:block; width:100%; height:100%; object-fit:contain; }
+
+/* The same illustration space develops from seed to young tree to leafy tree. */
+.leaf-tree-drawing { transform-origin:50% 90%; animation:gentle-tree-appear .45s ease-out both; }
+@keyframes gentle-tree-appear { from {opacity:.7; transform:scale(.96)} to {opacity:1;transform:scale(1)} }
+
+@media(max-width:700px) {
+  .mobile-tabbar {
+    grid-template-columns:repeat(6,minmax(0,1fr));
+    gap:1px;
+    padding-left:5px;
+    padding-right:5px;
+  }
+  .mobile-tabbar button { min-width:0; }
+  .mobile-tabbar button .tab-art { width:29px; height:29px; }
+  .mobile-tabbar button small { font-size:10px; white-space:nowrap; }
+
+  .student-weather-grid button { min-height:133px; gap:3px; padding:7px 4px 11px; }
+  .student-weather-grid .student-weather-art,
+  .student-weather-grid button:nth-child(n) .student-weather-art { width:100%; max-width:154px; height:96px; }
+  .student-weather-grid button:last-child { min-height:104px; gap:10px; }
+  .student-weather-grid button:last-child .student-weather-art { width:136px; max-width:45%; height:91px; }
+  .weather-sky-art { width:163px; height:108px; top:21px; right:3%; }
+}
+@media(max-width:390px) {
+  .student-weather-grid .student-weather-art,
+  .student-weather-grid button:nth-child(n) .student-weather-art { height:83px; }
+  .student-weather-grid button { min-height:125px; }
+  .mobile-tabbar button .tab-art { width:27px; height:27px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .leaf-tree-drawing { animation:none; }
+}

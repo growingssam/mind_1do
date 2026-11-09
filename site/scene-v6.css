@@ -1,0 +1,97 @@
+/* 마음정원 v6 — warm hand-drawn illustrations and genuine envelope / drawer interactions. */
+.story-icon { display:block; width:100%; height:100%; overflow:visible; }
+.app-header .app-nav [data-garden] { display:inline-flex; align-items:center; gap:5px; padding:9px 10px; font-size:13px; }
+.nav-art { width:23px; height:23px; display:inline-flex; flex:none; }
+.nav-label { font-weight:800; }
+.mobile-tabbar button { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; }
+.mobile-tabbar button .tab-art { width:33px; height:33px; display:block; margin:0 auto; }
+.mobile-tabbar button .tab-art .story-icon { width:100%; height:100%; }
+.mobile-tabbar button small { color:#53634d; font-size:11px; font-weight:800; }
+.mobile-tabbar button.is-current { background:#e4efd9; }
+.mobile-tabbar button.is-current small { color:#2d6545; }
+.student-paths .student-path-art { flex:none; display:flex; align-items:center; justify-content:center; position:relative; width:57px; height:57px; padding:8px; border-radius:16px; background:#e7efd9; }
+.student-paths .student-path-art small { position:absolute; right:-5px; bottom:-5px; margin:0; border-radius:50%; background:#fffdf4; border:1px solid #b9cfab; padding:2px 4px; font:800 9px/1 system-ui,sans-serif; color:#52684e; }
+.student-paths button { gap:14px; }
+.student-paths button:hover .student-path-art,.student-paths button:focus-visible .student-path-art { background:#d7e9c9; }
+
+/* Weather cards and selected state are illustrated in the very same storybook strokes. */
+.student-weather-grid { gap:10px; }
+.student-weather-grid button { min-height:142px; gap:8px; padding:12px 6px; border:2px solid #e6ddcc; background:#fffdf7; }
+.student-weather-grid .student-weather-art { display:block; width:72px; height:72px; padding:6px; border-radius:17px; background:#fff5de; }
+.student-weather-grid button:nth-child(2) .student-weather-art { background:#ecf2ea; }
+.student-weather-grid button:nth-child(3) .student-weather-art { background:#e3f1f2; }
+.student-weather-grid button:nth-child(4) .student-weather-art { background:#e4e9e8; }
+.student-weather-grid button:nth-child(5) .student-weather-art { background:#edf4dc; }
+.student-weather-grid .student-weather-name { font-size:13px; line-height:1.4; font-weight:850; color:#4f594b; }
+.student-weather-grid button.chosen { background:#f3f8e9; border-color:#8eaf82; }
+.student-mood-response { background:#fffdf5; border:2px solid #f1e4d4; color:#617660; }
+.weather-story-scene { width:min(100%,370px); height:202px; margin:0 auto 14px; position:relative; border-radius:24px; background:#e5f1da; overflow:hidden; }
+.weather-story-scene>svg { display:block; width:100%; height:100%; }
+.weather-sky-art { position:absolute; top:16px; right:34px; width:94px; height:94px; filter:drop-shadow(0 3px 0 #6a806019); }
+.weather-cloud { background:#edf0df; }.weather-rain { background:#dcecf1; }.weather-storm { background:#d8e3e2; }.weather-unsure { background:#e4eddf; }
+
+/* Two distinct drawers, a wooden top and feet: it now reads clearly as a dresser. */
+.student-drawer-picture { width:272px; height:285px; max-width:100%; margin:10px auto 0; background:transparent; border:0; position:relative; overflow:visible; }
+.student-drawer-case { position:absolute; z-index:2; left:20px; right:20px; bottom:34px; height:181px; border:8px solid #71533f; background:#d7a678; border-radius:19px 19px 13px 13px; box-shadow:7px 9px 0 #bf916c,0 18px 23px #6c46272b; }
+.student-drawer-top-surface { position:absolute; left:-16px; right:-14px; top:-23px; height:29px; background:#f3d2a5; border:7px solid #71533f; border-radius:13px; box-shadow:0 4px 0 #bd8f68; }
+.student-drawer-upper,.student-drawer-lower { position:absolute; display:block; left:13px; right:13px; height:65px; border:6px solid #77533e; background:#f4c49b; border-radius:12px; box-shadow:0 3px 0 #b3825d; transition:transform .48s ease,box-shadow .48s ease; }
+.student-drawer-upper { top:18px; z-index:5; }
+.student-drawer-lower { top:99px; z-index:4; }
+.student-drawer-handle { display:block; position:absolute; left:50%; top:50%; width:33px; height:20px; transform:translate(-50%,-50%); border:5px solid #806149; background:#fff3d6; border-radius:30px; }
+.student-drawer-foot { position:absolute; z-index:-1; bottom:-25px; width:31px; height:31px; border:6px solid #71533f; border-radius:0 0 8px 8px; background:#bd8e67; }
+.student-drawer-foot.left { left:8px; }.student-drawer-foot.right { right:8px; }
+.student-drawer-note { z-index:3; left:53px; top:48px; width:166px; height:102px; border:3px solid #c8b18c; box-shadow:0 7px 0 #ddcead; background:#fff9e8; color:#664f3f; font-size:12px; opacity:0; transform:translateY(80px) rotate(-5deg); transition:transform .58s ease,opacity .2s; }
+.student-drawer-picture.open .student-drawer-note { opacity:1; transform:translateY(-24px) rotate(-5deg); }
+.student-drawer-picture.open .student-drawer-upper { transform:translateY(20px) scale(1.05); box-shadow:0 12px 0 #936c4b,0 16px 12px #5b3b2f25; }
+.student-drawer-side .student-drawer-caption { color:#715a49; font-weight:750; margin-top:3px; }
+
+/* Consistent illustrated boat, paper plane, and little bean beside the stage. */
+.release-option-icon { display:block; width:50px; height:50px; padding:4px; border-radius:14px; background:#eef5e9; }
+.release-choices button span.release-option-icon { font-size:inherit; }
+.release-stage { background:#e6f0dc; }
+.release-boat { background:#dceee9; }.release-plane { background:#e9f2e5; }
+.release-bean-buddy { position:absolute; z-index:2; left:9%; bottom:29px; width:125px; height:205px; overflow:hidden; pointer-events:none; }
+.release-bean-buddy img { width:430px; max-width:none; height:auto; position:absolute; top:-3px; left:-58px; }
+.release-craft { z-index:3; width:235px; height:145px; left:49%; top:35%; filter:drop-shadow(0 5px 0 #315b4c1b); }
+.release-paper-plane { z-index:3; left:51%; top:29%; width:226px; height:145px; filter:drop-shadow(0 5px 0 #315b4c1b); }
+.release-craft img,.release-paper-plane img { width:100%; height:100%; object-fit:contain; display:block; }
+.release-fire .release-bean-buddy { display:none; }
+.release-fire .release-fire-illustration { width:475px; }
+.release-stage-label { color:#335b53; font-size:14px; text-shadow:0 2px 0 #f9f9ec8c; }
+.release-fire .release-stage-label { color:#fff9e5; }
+
+/* The paper begins OUT of the envelope, slides IN on send, then the flap closes. */
+.letter-envelope { display:block; padding:0; background:transparent; border:0; cursor:pointer; text-align:initial; }
+.letter-envelope:focus-visible { outline:3px solid #779d6f; outline-offset:5px; border-radius:12px; }
+.letter-envelope .letter-paper { z-index:2; display:block; overflow:auto; transform:translateY(-66px); transition:transform .9s cubic-bezier(.4,0,.35,1); }
+.letter-envelope #letter-preview-text { display:block; color:#78584c; font-size:12px; font-weight:750; line-height:1.65; white-space:pre-wrap; margin-top:7px; overflow-wrap:anywhere; }
+.letter-envelope .envelope-pocket { z-index:3; }
+.letter-envelope .envelope-flap { z-index:1; opacity:.6; transform:rotateX(157deg); transition:transform .65s ease,opacity .3s; }
+.letter-envelope .envelope-heart { z-index:5; }
+.letter-envelope.sealed .letter-paper { z-index:2; transform:translateY(39px); }
+.letter-envelope.sealed .envelope-flap { z-index:6; opacity:1; transform:rotateX(0deg); transition-delay:.65s; }
+.letter-envelope.sealed .envelope-heart { opacity:1; }
+.letter-envelope.sealed.open .letter-paper { z-index:5; transform:translateY(-66px); }
+.letter-envelope.sealed.open .envelope-flap { z-index:1; opacity:.38; transform:rotateX(157deg); transition-delay:0s; }
+.letter-envelope.sealed.open .envelope-heart { opacity:0; }
+.letter-full-message { max-width:93%; }
+
+@media(max-width:700px) {
+  .student-paths button { gap:9px; padding:10px 9px; }
+  .student-paths .student-path-art { width:47px; height:47px; padding:6px; border-radius:13px; }
+  .student-weather-grid button { min-height:116px; flex-direction:column; gap:5px; padding:8px 5px; }
+  .student-weather-grid .student-weather-art { width:59px; height:59px; padding:5px; }
+  .student-weather-grid button:last-child { grid-column:1/-1; flex-direction:row; min-height:78px; justify-content:center; }
+  .weather-story-scene { height:173px; }.weather-sky-art { width:73px; height:73px; right:21px; }
+  .student-drawer-picture { width:265px; height:274px; }
+  .release-bean-buddy { left:2%; width:93px; height:145px; bottom:34px; }
+  .release-bean-buddy img { width:310px; left:-43px; top:-3px; }
+  .release-craft { width:155px; height:102px; left:45%; top:41%; }
+  .release-paper-plane { width:162px; height:105px; left:45%; top:31%; }
+  .release-option-icon { width:39px; height:39px; padding:3px; }
+  .release-stage-label { bottom:9px; font-size:12px; }
+  .mobile-tabbar button .tab-art { width:34px; height:34px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .student-drawer-note,.student-drawer-upper,.student-drawer-lower,.letter-envelope .letter-paper,.letter-envelope .envelope-flap { transition:none; }
+}

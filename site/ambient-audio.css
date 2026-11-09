@@ -1,0 +1,70 @@
+/* Quiet and optional soundtrack controls, accessible at the top of every activity. */
+.app-header .header-actions { flex-shrink:0; }
+.ambience-control {
+  position:relative;
+  z-index:60;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  font-family:-apple-system,BlinkMacSystemFont,'Pretendard','Noto Sans KR',system-ui,sans-serif;
+}
+.ambience-toggle,
+.ambience-settings-button {
+  min-height:38px;
+  border:1px solid #d9e3ce;
+  background:#f3f7ea;
+  color:#57705c;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:99px;
+  cursor:pointer;
+  transition:background .2s ease,border-color .2s ease;
+}
+.ambience-toggle { padding:7px 11px; gap:7px; white-space:nowrap; font-size:12px; font-weight:800; }
+.ambience-toggle .ambience-speaker { flex-shrink:0; }
+.ambience-toggle .ambience-wave { opacity:.23; }
+.ambience-toggle.is-playing { color:#2e6655; background:#e1f0db; border-color:#9dbfa7; }
+.ambience-toggle.is-playing .ambience-wave { opacity:1; }
+.ambience-settings-button { width:38px; padding:0; }
+.ambience-toggle:hover,.ambience-settings-button:hover,
+.ambience-toggle:focus-visible,.ambience-settings-button:focus-visible { background:#e9f2e0; border-color:#9aba9c; }
+.ambience-toggle:focus-visible,.ambience-settings-button:focus-visible { outline:2px solid #426c57; outline-offset:2px; }
+.ambience-panel {
+  position:absolute;
+  right:0;
+  top:calc(100% + 9px);
+  z-index:70;
+  width:min(283px,calc(100vw - 26px));
+  padding:17px;
+  border:1px solid #d2dfc7;
+  border-radius:17px;
+  background:#fffdf6;
+  box-shadow:0 15px 40px rgba(43,62,39,.17);
+  color:#45654d;
+  text-align:left;
+}
+.ambience-panel[hidden] { display:none !important; }
+.ambience-panel strong { display:block; font-size:15px; margin-bottom:5px; }
+.ambience-panel p { margin:0 0 14px; line-height:1.55; font-size:12px; color:#73846f; }
+.ambience-panel label { display:flex; justify-content:space-between; font-size:12px; font-weight:800; }
+.ambience-panel output { color:#547d66; font-variant-numeric:tabular-nums; }
+.ambience-panel input { display:block; width:100%; min-height:30px; margin:4px 0 6px; accent-color:#628b70; cursor:pointer; }
+.ambience-panel small { display:block; font-size:11px; line-height:1.6; color:#8b897e; }
+.ambience-panel small strong { display:inline; font-size:inherit; color:#617766; }
+.ambience-panel #ambience-status { color:#456b52; font-weight:750; margin-bottom:8px; }
+.ambience-panel .ambience-credit { margin-top:9px; font-size:10px; color:#7c8676; }
+.ambience-panel .ambience-credit a { color:#4f7759; text-decoration:underline; text-underline-offset:2px; }
+.ambience-control audio { display:none; }
+@media(max-width:500px) {
+  .ambience-toggle { min-height:36px; padding:6px 9px; font-size:11px; }
+  .ambience-settings-button { width:35px; min-height:36px; }
+  .ambience-control { gap:4px; }
+}
+@media(max-width:370px) {
+  .ambience-toggle .ambience-label { display:none; }
+  .ambience-toggle { width:37px; padding:0; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ambience-toggle,.ambience-settings-button { transition:none; }
+}

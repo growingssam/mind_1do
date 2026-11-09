@@ -1,0 +1,76 @@
+/* A living storybook tree: saved words unfold as individual leaves at branch tips. */
+.leaf-tree {
+  aspect-ratio: 1 / 1;
+  overflow: visible;
+  isolation: isolate;
+}
+.leaf-tree-illustration {
+  position: absolute;
+  inset: 5% 3.5% 2%;
+  width: 93%;
+  height: 93%;
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 5px 1px rgba(112, 135, 82, .08));
+}
+.tree-leaf {
+  width: 12%;
+  min-width: 40px;
+  max-width: 59px;
+  aspect-ratio: 80 / 70;
+  left: var(--leaf-x);
+  top: var(--leaf-y);
+  transform: translate(-18%, -77%);
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 30%;
+  filter: none;
+  transition: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.tree-leaf svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(var(--leaf-rotate)) scale(1);
+  transform-origin: 18% 77%;
+  transition: transform .18s ease, filter .18s ease;
+}
+.tree-leaf:hover,
+.tree-leaf:focus-visible,
+.tree-leaf.selected {
+  transform: translate(-18%, -77%);
+  filter: none;
+}
+.tree-leaf:hover svg,
+.tree-leaf:focus-visible svg {
+  transform: rotate(var(--leaf-rotate)) scale(1.08);
+}
+.tree-leaf.selected {
+  outline: none;
+  animation: none;
+}
+.tree-leaf.selected svg {
+  filter: drop-shadow(0 0 3px rgba(241, 219, 107, .8));
+}
+.tree-leaf:focus-visible {
+  outline: 2px solid #49724f;
+  outline-offset: 3px;
+}
+.tree-leaf.is-new svg {
+  animation: kind-leaf-unfurl 1.2s cubic-bezier(.2, .65, .27, 1.08) both;
+}
+@keyframes kind-leaf-unfurl {
+  0%   { opacity: .25; transform: rotate(calc(var(--leaf-rotate) - 25deg)) scale(.12); }
+  35%  { opacity: 1; transform: rotate(calc(var(--leaf-rotate) - 12deg)) scale(.46); }
+  76%  { transform: rotate(calc(var(--leaf-rotate) + 4deg)) scale(1.08); }
+  100% { opacity: 1; transform: rotate(var(--leaf-rotate)) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tree-leaf.is-new svg { animation: none; }
+  .tree-leaf svg { transition: none; }
+}
